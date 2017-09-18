@@ -36,12 +36,12 @@ function getTasks(){
                     $taskRow.append('<td class="dueItem">' + serverResp[i].due);
                     if (serverResp[i].completed != true) {
                         // $taskRow.append('<td>' + '<input value="Complete" type="button" class="btn btn-success" id="completeTask">');
-                        $taskRow.append('<td>' + '<button class="btn btn-success" id="completeTask"><span class="glyphicon glyphicon-ok"></span></button>');
+                        $taskRow.append('<td>' + '<button class="btn btn-success" id="completeTask" title="Complete"><span class="glyphicon glyphicon-ok"></span></button>');
                     } else {
                         $taskRow.append('<td>');
                     }
                     //$taskRow.append('<td>' + '<input value="Complete" type="button" class="btn btn-success" id="completeTask">');
-                    $taskRow.append('<td>' + '<button class="btn btn-danger" id="deleteTask"><span class="glyphicon glyphicon-trash"></span></button>');
+                    $taskRow.append('<td>' + '<button class="btn btn-danger" id="deleteTask" title="Delete"><span class="glyphicon glyphicon-trash"></span></button>');
                     if (serverResp[i].completed) {
                         $('#completedTasksBody').append($taskRow);
                     } else {
