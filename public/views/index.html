@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+        <script src="../vendors/jquery.min.js" charset="utf-8"></script>
+        <script src="../scripts/client.js" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    </head>
+    <body class="container">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <h1>Everlist <span class="glyphicon glyphicon-th-list"></span></h1>
+        </header>
+        <main>
+            <section class="row">
+                <div class="col-md-7"><h3>Add a task</h3></div>
+                <div class="col-md-5" style="padding: 0 !important"><h3>Pick a due date (optional)</h3></div>
+            </section>
+            <section id="inputArea" class="row">
+                <div class="col-md-7">
+                    <input type="text" placeholder="What would you like to get done?" id="taskIn" style="width: 100%"/>
+                </div>
+                <div class="col-md-4" style="padding: 0 !important">
+                    <input type="date" placeholder="Due date (optional)" id="dateIn"/>
+                    <select id="hourIn">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12" selected="selected">12</option>
+                    </select>
+                    <select id="minutesIn">
+                        <option value="00" selected="selected">:00</option>
+                        <option value="05">:05</option>
+                        <option value="10">:10</option>
+                        <option value="15">:15</option>
+                        <option value="20">:20</option>
+                        <option value="25">:25</option>
+                        <option value="30">:30</option>
+                        <option value="35">:35</option>
+                        <option value="40">:40</option>
+                        <option value="45">:45</option>
+                        <option value="50">:50</option>
+                        <option value="55">:55</option>
+                    </select>
+                    <select id="ampmIn">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </div>
+                <div class="col-md-1">
+                    <input type="button" value="Add Task" id="addTaskButton" class="btn btn-default btn-sm"/>
+                </div>
+            </section>
+            <section id="dataArea">
+                <h2 id="tasksPresentHead">What's next?</h2>
+                <h2 id="tasksDoneHead">Nothing to see here, add a task!</h2>
+                <table id="taskTable">
+                    <thead>
+                        <th class="col-md-7" style="padding: 0 !important">Task</th>
+                        <th class="col-md-3" style="padding: 0 !important">Due</th>
+                        <th class="col-md-1"></th>
+                        <th class="col-md-1"></th>
+                    </thead>
+                    <tbody id="taskTableBody">
+                        <!-- appended data goes here -->
+                    </tbody>
+                    <tfoot id="completedTasksBody">
+
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
