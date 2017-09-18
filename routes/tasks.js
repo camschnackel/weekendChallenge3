@@ -66,7 +66,6 @@ router.post('/complete', function (req, res) {
             res.sendStatus(500);
         } else {
             var queryString = 'UPDATE tasks SET completed=true WHERE id=$1';
-            var boolean = true;
             var values = [input];
             client.query(queryString, values, function (qErr, resultObj){
                 done();
